@@ -12,7 +12,7 @@ const CommContent = () => {
           </span>
         </Form.Field>
         <Form.TextArea placeholder="Message in Slack" />
-        <Form.Button primary compact tiny>
+        <Form.Button primary compact>
           Send
         </Form.Button>
       </Form>
@@ -25,7 +25,7 @@ const CommContent = () => {
         </Form.Field>
         <Form.Field label="To: " control={Input} placeholder="Email Address" />
         <Form.TextArea placeholder="Email Message" />
-        <Form.Button primary compact tiny>
+        <Form.Button primary compact>
           Send Email
         </Form.Button>
       </Form>

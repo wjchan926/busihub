@@ -1,0 +1,11 @@
+.SocialContentContainer {
+  display: flex;
+}
+
+.SocialContentColumn {
+  flex: 1;
+}
+
+.SocialContentColumn:not(:last-child){
+    margin-right: 10px;
+}
