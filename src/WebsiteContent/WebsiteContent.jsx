@@ -2,8 +2,6 @@ import React, { useCallback, useState } from "react";
 
 import { Form } from "semantic-ui-react";
 
-import config from "../config/config.json";
-
 const WebsiteContent = () => {
   const [message, setMessage] = useState("");
   const [title, setTitle] = useState("");
@@ -17,7 +15,7 @@ const WebsiteContent = () => {
   }, []);
 
   const handlePost = async () => {
-    await fetch(config.WEBSITE.WEBSITE_API_URL, {
+    await fetch(process.env.REACT_APP_WEBSITE_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

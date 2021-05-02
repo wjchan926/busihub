@@ -2,8 +2,6 @@ import React, { useState, useCallback } from "react";
 
 import { Form } from "semantic-ui-react";
 
-import config from "../config/config.json";
-
 const CommContent = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -25,7 +23,7 @@ const CommContent = () => {
     setFrom(e.target.value);
   }, []);
   const handleEmail = async () => {
-    await fetch(config.COMM_CONTENT.EMAIL_API_URL, {
+    await fetch(process.env.REACT_APP_EMAIL_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=UTF-8",

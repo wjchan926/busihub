@@ -4,7 +4,6 @@ import { Form } from "semantic-ui-react";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import short from "short-uuid";
 
-import config from "../config/config.json";
 import "./SocialContent.css";
 
 const SocialContent = () => {
@@ -16,11 +15,11 @@ const SocialContent = () => {
   }, []);
 
   const handleTweet = async () => {
-    await fetch(config.SOCIAL_CONTENT.TWITTER_API_URL, {
+    await fetch(process.env.REACT_APP_TWITTER_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=UTF-8",
-        "x-api-key": config.SOCIAL_CONTENT.TWITTER_API_KEY,
+        "x-api-key": process.env.REACT_APP_TWITTER_API_KEY,
       },
       mode: "no-cors",
       body: JSON.stringify({
@@ -56,8 +55,8 @@ const SocialContent = () => {
         <div className="SocialContentColumn">
           <TwitterTimelineEmbed
             key={timelineKey}
-            sourceType={config.SOCIAL_CONTENT.SOURCE_TYPE}
-            screenName={config.SOCIAL_CONTENT.TWITTER_HANDLE}
+            sourceType={process.env.REACT_APP_SOURCE_TYPE}
+            screenName={process.env.REACT_APP_TWITTER_HANDLE}
             options={{ height: 400 }}
           />
         </div>
