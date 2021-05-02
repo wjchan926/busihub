@@ -35,6 +35,8 @@ const CommContent = () => {
       body: JSON.stringify({
         text: message,
         subject: subject,
+        to,
+        from,
       }),
     });
   };
