@@ -31,14 +31,16 @@ const WebsiteContent = () => {
   };
 
   return (
-    <Form>
+    <Form autoComplete="off">
       <Form.Field>
         <span>
           <label>Website Url: </label>
-          <a href="http://www.wchan-labs.com" target="_blank" rel="noreferrer">www.wchan-labs.com</a>
+          <a href="http://www.wchan-labs.com" target="_blank" rel="noreferrer">
+            www.wchan-labs.com
+          </a>
         </span>
       </Form.Field>
-      <Form.TextArea
+      <Form.Input
         label="Post Title:"
         placeholder="Title of Post"
         onChange={handleTitleChange}

@@ -36,7 +36,7 @@ const SocialContent = () => {
     <>
       <div className="SocialContentContainer">
         <div className="SocialContentColumn">
-          <Form>
+          <Form autoComplete="off">
             <Form.TextArea
               label="Tweet Content:"
               placeholder="Type Content to Tweet"
