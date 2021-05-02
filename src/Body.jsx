@@ -3,7 +3,7 @@ import React from "react";
 import WebsiteContent from "./WebsiteContent";
 import SocialContent from "./SocialContent";
 import CommContent from "./CommContent";
-import AccountingContent from "./AccountingContent";
+// import AccountingContent from "./AccountingContent";
 
 import { Tab } from "semantic-ui-react";
 
@@ -35,14 +35,14 @@ const Body = () => {
         </Tab.Pane>
       ),
     },
-    {
-      menuItem: "Accounting",
-      render: () => (
-        <Tab.Pane>
-          <AccountingContent />
-        </Tab.Pane>
-      ),
-    },
+    // {
+    //   menuItem: "Accounting",
+    //   render: () => (
+    //     <Tab.Pane>
+    //       <AccountingContent />
+    //     </Tab.Pane>
+    //   ),
+    // },
   ];
 
   return (
